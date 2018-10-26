@@ -1,5 +1,5 @@
 class Stack
-
+  attr_reader :stack
   def initialize
     @stack = []
 
@@ -7,6 +7,7 @@ class Stack
 
   def push(ele)
     @stack.push(ele)
+    ele
   end
 
   def pop
@@ -19,13 +20,14 @@ class Stack
 end
 
 class Queue
-
+  attr_reader :queue
   def initialize
     @queue = []
   end
 
   def enqueue(ele)
     @queue.unshift(ele)
+    ele
   end
 
   def dequeue
