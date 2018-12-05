@@ -212,7 +212,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // window.fetchSearchGiphys = fetchSearchGiphys;
+
+document.addEventListener('DOMConentLoaded', function () {
+  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  var root = document.getElementById('root');
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    store: store
+  }), root);
+});
 
 /***/ }),
 
@@ -23905,7 +23912,7 @@ module.exports = function(originalModule) {
 /*!************************************!*\
   !*** ./reducers/giphys_reducer.js ***!
   \************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23925,6 +23932,8 @@ var giphysReducer = function giphysReducer() {
       return state;
   }
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (giphysReducer);
 
 /***/ }),
 
@@ -23951,7 +23960,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************!*\
   !*** ./store/store.js ***!
   \************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23962,6 +23971,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+var configureStore = function configureStore() {
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (configureStore);
 
 /***/ }),
 
